@@ -1,0 +1,81 @@
+<div id="group-container">
+    <div class="group-header">
+
+        <ng-container *ngIf="isMemberShow">
+            <div class="title-txt">
+                Select Members
+            </div>
+            <mat-icon (click)="isMemberShow = false" *ngIf="!isMemberSelected">close</mat-icon>
+            <mat-icon (click)="saveMembers()" *ngIf="isMemberSelected">check</mat-icon>
+        </ng-container>
+
+        <ng-container *ngIf="!isMemberShow">
+            <div class="title-txt">
+                Add new group
+            </div>
+
+            <mat-icon (click)="saveGroup()"
+                *ngIf="(selectedMembers && selectedMembers.length > 1) && (getName() !== '')">check</mat-icon>
+            <mat-icon (click)="close('GROUP')"
+                *ngIf="(selectedMembers.length <= 1) || (getName() === '')">close</mat-icon>
+        </ng-container>
+    </div>
+
+
+    <ng-container *ngIf="!isMemberShow">
+        <form id="form" [formGroup]="form">
+            <div class="w-full">
+                <mat-label>Group name </mat-label>
+                <mat-form-field appearance="outline">
+                    <input matInput formControlName="groupName">
+                </mat-form-field>
+
+                <mat-error *ngIf="form.get('groupName')?.hasError('required')">
+                    Group name is required
+                </mat-error>
+            </div>
+        </form>
+        <div class="w-full">
+
+            <ng-container *ngIf="selectedMembers && selectedMembers.length > 0">
+                <div class="selected-members">
+                    <div class="member" *ngFor="let member of selectedMembers">
+                        <mat-checkbox class="example-margin" color="primary" disabled checked>
+                        </mat-checkbox>
+
+                        <div class="name-txt">
+                            <!-- Mark Davidson -->
+                            {{member.name}}
+                        </div>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+
+        <button mat-button class="add-member-btn" (click)="isMemberShow = true">
+            {{selectedMembers.length > 1 ? 'Edit' : 'Add'}} Member
+        </button>
+    </ng-container>
+
+    <ng-container *ngIf="isMemberShow">
+        <div class="members">
+
+            <div *ngFor="let member of members"
+                style="display: flex; justify-content: space-between; align-items: center; padding: 10px; overflow: hidden; margin-bottom:10px;"
+                class="member">
+
+                <div class="member-name" style="font-size: 16px;">
+                    <!-- Mark Davidson -->
+                    {{member.name}}
+                </div>
+
+                <div>
+                    <mat-checkbox [disabled]="member.userId === loginUserId" [checked]="member.isMemberSelected || (member.userId === loginUserId)" class="example-margin" color="primary"
+                        (change)="updateMemberSelection($event, member)">
+                    </mat-checkbox>
+                </div>
+            </div>
+
+        </div>
+    </ng-container>
+</div>

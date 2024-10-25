@@ -1,0 +1,93 @@
+<!-- <style>
+    .main-box {
+        width: 100vw;
+        height: calc(100vh - 70px);
+        background: lightblue;
+        position: relative;
+    }
+
+    .box {
+        width: 100px;
+        height: 100px;
+        background: lightcoral;
+        position: absolute;
+        font-size: 16px;
+        font-weight: 700;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .first {
+        top: 0;
+        left: 0;
+    }
+
+    .second {
+        top: 0;
+        right: 0;
+    }
+
+    .third {
+        bottom: 0;
+        right: 0;
+    }
+
+    .forth {
+        bottom: 0;
+        left: 0;
+    }
+
+
+    @media screen and (max-width:990px) {
+        .main-box {
+            transform: rotate(90deg);
+        }
+    }
+</style>
+
+<div class="main-box">
+    <div class="box first">
+        1
+    </div>
+    <div class="box second">
+        2
+    </div>
+    <div class="box third">
+        3
+    </div>
+    <div class="box forth">
+        4
+    </div>
+</div> -->
+
+
+
+
+
+<ng-container *ngIf="!loading">
+    <div class="flex items-center" style="width: 80%; margin: 1.4rem auto 1.3rem; display: none !important;">
+        <img class="back_icn" (click)="close()" src="assets/icons/left-arrow.png" alt="">
+        <div style="margin-left: 20px; font-size: 20px;  font-family: 'Work Sans' , sans-serif;">
+            Welcome to Anime Paradox
+        </div>
+    </div>
+
+    <div id="container11" mat-dialog-content>
+        <div #plyrElement plyr (plyrInit)="onPlyrInit($event)" style="max-height: 100%; max-width: 100%;"
+            (plyrPlay)="played($event, vidSrc[0]['fileId'])" [attr.data-id]="vidSrc[0]['fileId']" [plyrSources]="vidSrc"
+            [plyrPlaysInline]="false" [plyrCrossOrigin]="false" id="feed-gallery-video" [plyrDriver]="hlsDriver"
+            class="feed-player prevent-global-swipe relative custom-plyr">
+        </div>
+        
+        <div class="custom-controls">
+            
+        </div>
+    </div>
+</ng-container>
+
+<ng-container *ngIf="loading">
+    <div class="loading" mat-dialog-content>
+        <mat-spinner [diameter]="40"></mat-spinner>
+    </div>
+</ng-container>

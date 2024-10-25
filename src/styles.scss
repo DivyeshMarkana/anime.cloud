@@ -1,0 +1,134 @@
+/* You can add global styles to this file, and also import other style files */
+
+// @import '~swiper/dist/css/swiper.min.css';
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --sidebar-bg: #212121;
+    --text-white: #fff;
+    // --primary-green-clr: #7bc143;
+    // --primary-green-light: #7cc143bf;
+    --primary-green-clr: #d4581f;
+    // --primary-green-clr: #4388c1;
+    // --primary-green-light: #4388c1ab;
+
+    // --primary-green-light: #dd4e0b;
+    // --primary-green-light: #0b90dd;
+    --primary-green-light: #3fb9ff;
+
+    --bg: #121417;
+    --light: #36373a;
+    // --side-content: #222426;
+    --side-content: #000000;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: "Work Sans", sans-serif;
+}
+
+.mat-flat-button.mat-primary {
+    background-color: var(--primary-green-light);
+}
+
+.mat-raised-button.mat-primary {
+    background-color: var(--primary-green-light);
+}
+
+.mat-icon.mat-primary {
+    color: var(--primary-green-light);
+}
+
+.mat-dialog-container {
+    padding: 0% !important;
+    border-radius: 15px !important;
+    overflow: hidden !important;
+    background: #212121 !important;
+    color: var(--text-white) !important;
+}
+
+.mat-dialog-content {
+    margin: 0 !important;
+}
+
+.w-full {
+    width: 100% !important;
+}
+
+.h-full {
+    height: 100% !important;
+}
+
+.relative {
+    position: relative !important;
+}
+
+.absolute {
+    position: absolute !important;
+}
+
+.overflow-hidden {
+    overflow: hidden !important;
+}
+
+.overflow-y-scroll {
+    overflow-y: scroll !important;
+}
+
+.flex {
+    display: flex !important;
+    // justify-content: space-between;
+    // align-items: center;
+}
+
+.justify-center {
+    // display: flex;
+    justify-content: center !important;
+    // align-items: center;
+}
+
+.items-center {
+    // display: flex;
+    // justify-content: center;
+    align-items: center !important;
+}
+
+.object-cover {
+    object-fit: cover !important;
+}
+
+.object-contain {
+    object-fit: contain !important;
+}
+
+// .mat-form-field-outline-start {
+//     // border-color: var(--primary-green-light);
+//     // border-radius: 15px !important;
+//     border: 0px !important;
+// }
+
+// .mat-form-field-outline-gap {
+//     // border-color: var(--primary-green-light);
+//     // border-radius: 15px !important;
+//     border: 0px !important;
+// }
+
+// .mat-form-field-outline-end {
+//     // border-color: var(--primary-green-light);
+//     // border-radius: 15px !important;
+//     border: 0px !important;
+// }
+
+// .mat-form-field-appearance-outline .mat-form-field-infix {
+//     border: 0 !important;
+// }
+
+// .mat-form-field-appearance-outline .mat-form-field-flex {
+//     border: 2px solid var(--primary-green-light);
+//     border-radius: 15px !important;
+// }

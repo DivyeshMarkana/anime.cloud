@@ -1,0 +1,115 @@
+<mat-progress-bar *ngIf="loading" color="primary" mode="indeterminate"></mat-progress-bar>
+<mat-drawer-container class="example-container">
+    <!-- [mode]="getMobile() ? 'over' : 'side'" -->
+    <!-- [opened]="getMobile() ? false : true" -->
+    <mat-drawer #drawer class="example-sidenav" [mode]="getMobile() ? 'over' : 'side'" [opened]="false" disableClose>
+
+        <ng-container *ngIf="getMobile()">
+            <mat-icon style="display: flex; justify-content: flex-end; width: 100%;" (click)="drawer.close()">
+                close
+            </mat-icon>
+        </ng-container>
+
+        <!-- <ng-container *ngIf="!getMobile()"> -->
+        <div class="user-details">
+            <div class="user-photo">
+                <img src="assets/images/profile.jpg" alt="">
+            </div>
+
+            <div class="user-name-txt">
+                <p>
+                    Mark davidson
+                </p>
+            </div>
+        </div>
+
+        <!-- <ul class="navigation-list" *ngIf="!loading">
+            <ng-container *ngFor="let tab of tabs">
+                <ng-container *ngIf="tab.tabType === 'normal'">
+                    <li routerLink="category" class="navigation-item" routerLinkActive="active-tab">
+
+                        <div class="navigation-icon">
+                            <mat-icon>{{tab.icon}}</mat-icon>
+                        </div>
+
+                        <p class="navigation-txt">
+                            {{tab.tabName}}
+                        </p>
+                    </li>
+                </ng-container>
+
+                <ng-container *ngIf="tab.tabType === 'multi'">
+                    <mat-accordion>
+                        <mat-expansion-panel [expanded]="tab.isExpanded" (opened)="tab.isExpanded = true"
+                            (closed)="tab.isExpanded = false"
+                            [ngClass]="tab.isExpanded ? 'expansion-panel-opened' : ''">
+                            <mat-expansion-panel-header>
+                                <div class="navigation-icon">
+                                    <mat-icon>{{tab.icon}}</mat-icon>
+                                </div>
+
+                                <p class="navigation-txt">
+                                    {{tab.tabName}}
+                                </p>
+
+                            </mat-expansion-panel-header>
+
+                            <ul class="sub-list">
+                                <li class="sub-list-item" *ngFor="let sub of tab.subGroup"
+                                    (click)="getMobile() ? drawer.close() : null" [routerLink]="'group/' + sub.groupId"
+                                    routerLinkActive="active-tab">
+                                    <a class="sub-list-item-txt">
+                                        {{sub.groupName}}
+                                    </a>
+                                </li>
+
+                                <li class="sub-list-item">
+                                    <button mat-button class="add-grp-btn" (click)="addGroup()">
+                                        Add Group
+                                    </button>
+                                </li>
+                            </ul>
+                        </mat-expansion-panel>
+                    </mat-accordion>
+                </ng-container>
+            </ng-container>
+        </ul> -->
+    </mat-drawer>
+
+    <mat-drawer-content class="example-sidenav-content">
+        <!-- <div class="sidenav-content-header" [ngClass]="getMobile() ? 'flex-between' : 'flex-end'"> -->
+        <div class="sidenav-content-header">
+
+            <ng-container *ngIf="getMobile()">
+                <div (click)="toggle()">
+                    <mat-icon class="user-icon">menu</mat-icon>
+                </div>
+            </ng-container>
+
+            <div></div>
+
+
+            <!-- <div style="width: 400px;">
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <input type="text" matInput placeholder="Search">
+                        <div style="background: red; width: 35px; height: 35px; border-radius: 50%; display: flex; justify-content: center; align-items: center;">
+                            <mat-icon>search</mat-icon>
+                        </div>
+                  </mat-form-field>
+            </div> -->
+
+            <!-- <div [matMenuTriggerFor]="beforeMenu">
+                <mat-icon class="user-icon">account_circle</mat-icon>
+            </div> -->
+
+            <mat-menu #beforeMenu="matMenu" xPosition="before">
+                <button mat-menu-item>Profile</button>
+                <button mat-menu-item (click)="logout()">Logout</button>
+            </mat-menu>
+        </div>
+
+        <div class="route-content">
+            <router-outlet></router-outlet>
+        </div>
+    </mat-drawer-content>
+</mat-drawer-container>
