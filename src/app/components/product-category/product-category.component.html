@@ -1,5 +1,7 @@
 <div class="bg-transparent text-white min-h-screen" id="landing-page">
-  <div id="top-section-web">
+
+  HOME PAGE
+  <!-- <div id="top-section-web">
     <div class="swiper-container"
       [swiper]="swiperConfigCarouselWeb" [(index)]="swiperIndex">
       <div class="swiper-wrapper">
@@ -16,9 +18,9 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
-  <div id="top-section-mob">
+  <!-- <div id="top-section-mob">
     <div class="swiper-container"
       [swiper]="swiperConfigCarouselMob" [(index)]="swiperIndex">
       <div class="swiper-wrapper">
@@ -35,7 +37,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <!-- ******************************* -->
   <!-- ******************************* -->
@@ -43,27 +45,8 @@
   <!-- ******************************* -->
   <!-- ******************************* -->
 
-  <!-- <section class="container mx-auto px-4 mb-12">
-    <h2 class="text-2xl font-bold mb-6 uppercase">Latest</h2>
-    <div class="grid grid-cols-2 lg:grid-cols-6 gap-4">
-      <div *ngFor="let anime of latestList; let i = index;"
-        class="relative anime-item rounded overflow-hidden"
-        routerLink="/{{anime.id}}">
-        <img [src]="anime.poster" [alt]="anime.name" loading="eager"
-          class="w-full h-full object-cover"
-          onerror="this.src= 'assets/posters/poster.jpg'">
-        <div class="absolute bottom-0 left-0 px-2 py-1 text-sm anime-title">
-          <span class="anime-title-txt">#{{i + 1}} {{ anime.name }}</span>
-        </div>
 
-        <div class="anime-item-overlay">
-          <mat-icon>play_circle_outline</mat-icon>
-        </div>
-      </div>
-    </div>
-  </section> -->
-
-  <div class="container px-4 sm:mx-auto mb-4" id="ani-list">
+  <!-- <div class="container px-4 sm:mx-auto mb-4" id="ani-list">
     <h2 class="text-2xl font-bold mb-6 uppercase">Latest</h2>
     <ng-container *ngIf="!loadingLatest">
       <div class="swiper-centered-slides rounded swiper-container"
@@ -87,7 +70,7 @@
         </div>
       </div>
     </ng-container>
-  </div>
+  </div> -->
 
   <!-- *********************************************** -->
   <!-- *********************************************** -->
@@ -95,7 +78,7 @@
   <!-- *********************************************** -->
   <!-- *********************************************** -->
 
-  <section class="container mx-auto px-4 mb-12" id="ani-list">
+  <!-- <section class="container mx-auto px-4 mb-12" id="ani-list">
     <h2 class="text-2xl font-bold mb-6 uppercase">Recommendation</h2>
     <ng-container *ngIf="!loadingRecommed">
       <div class="swiper-centered-slides rounded swiper-container"
@@ -119,7 +102,7 @@
         </div>
       </div>
     </ng-container>
-  </section>
+  </section> -->
 
   <!-- ******************************************* -->
   <!-- ******************************************* -->
@@ -127,7 +110,7 @@
   <!-- ******************************************* -->
   <!-- ******************************************* -->
 
-  <ng-container *ngIf="sectionAnime">
+  <!-- <ng-container *ngIf="sectionAnime">
     <section id="section-anime"
       class="container mx-auto mb-4 flex flex-col rounded overflow-hidden">
       <div class="flex section-content">
@@ -136,7 +119,6 @@
         <div class="p-8 section-detail w-full">
           <h2
             class="text-3xl font-bold mb-2 section-title">{{sectionAnime.name}}</h2>
-          <!-- <p class="text-sm mb-4">2022 | Action | 4K HDR | 13+</p> -->
           <p class="mb-6 section-desc" style="max-width: 800px;">
             Death Note is a supernatural thriller fantasy manga written by
             Tsugumi Oba and illustrated by Takeshi Obata. The work was adapted
@@ -187,7 +169,7 @@
         </div>
       </div>
     </section>
-  </ng-container>
+  </ng-container> -->
 
   <!-- ******************************* -->
   <!-- ******************************* -->
@@ -195,7 +177,7 @@
   <!-- ******************************* -->
   <!-- ******************************* -->
 
-  <section class="container mx-auto px-4 mb-12 py-4 sm:py-[2rem]" id="ani-list">
+  <!-- <section class="container mx-auto px-4 mb-12 py-4 sm:py-[2rem]" id="ani-list">
     <h2 class="text-2xl font-bold mb-6 uppercase">Most Popular anime</h2>
     <ng-container *ngIf="!loadingPopular">
       <div class="swiper-centered-slides rounded swiper-container"
@@ -219,5 +201,5 @@
         </div>
       </div>
     </ng-container>
-  </section>
+  </section> -->
 </div>

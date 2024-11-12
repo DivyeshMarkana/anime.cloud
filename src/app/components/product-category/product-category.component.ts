@@ -9,9 +9,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { ThemeHelpersService } from 'src/app/shared/theme-helpers.service';
 import { getMobile } from 'src/app/shared/theme-helpers.service';
 import { MatBottomSheet, MatBottomSheetRef } from '@angular/material/bottom-sheet';
-// import { ExpenseDetailsComponent } from '../expense-details/expense-details.component';
 
-import { SwiperConfigInterface, SwiperDirective } from "ngx-swiper-wrapper";
+// import { SwiperConfigInterface, SwiperDirective } from "ngx-swiper-wrapper";
 import { animate, style, transition, trigger } from '@angular/animations';
 import { PlayerComponent } from 'src/app/common/player/player.component';
 
@@ -30,7 +29,7 @@ interface Slide {
 })
 export class ProductCategoryComponent implements OnInit, AfterViewInit {
 
-  @ViewChild(SwiperDirective, { static: false }) directiveRef?: SwiperDirective;
+  // @ViewChild(SwiperDirective, { static: false }) directiveRef?: SwiperDirective;
   categories: any = [];
   groupId: any = null;
   getMobile = getMobile;
@@ -52,40 +51,40 @@ export class ProductCategoryComponent implements OnInit, AfterViewInit {
   selectedSeason: any = null
   selectedSeasonNumber = '-1';
 
-  swiperConfigCarouselWeb: SwiperConfigInterface = {
-    slidesPerView: 1.3,
-    centeredSlides: true,
-    spaceBetween: -50,
-    navigation: true,
-    loop: true,
-    speed: 1500,
-    pagination: { clickable: true },
-    autoplay: {
-      delay: 3500,
-      disableOnInteraction: false
-    }
-  };
+//   swiperConfigCarouselWeb: SwiperConfigInterface = {
+//     slidesPerView: 1.3,
+//     centeredSlides: true,
+//     spaceBetween: -50,
+//     navigation: true,
+//     loop: true,
+//     speed: 1500,
+//     pagination: { clickable: true },
+//     autoplay: {
+//       delay: 3500,
+//       disableOnInteraction: false
+//     }
+//   };
 
-  swiperConfigCarouselMob: SwiperConfigInterface = {
-    slidesPerView: 1,
-    centeredSlides: true,
-    spaceBetween: 0,
-    navigation: true,
-    loop: true,
-    speed: 1500,
-    pagination: { clickable: true },
-    autoplay: {
-      delay: 3500,
-      disableOnInteraction: false
-    }
-  };
+//   swiperConfigCarouselMob: SwiperConfigInterface = {
+//     slidesPerView: 1,
+//     centeredSlides: true,
+//     spaceBetween: 0,
+//     navigation: true,
+//     loop: true,
+//     speed: 1500,
+//     pagination: { clickable: true },
+//     autoplay: {
+//       delay: 3500,
+//       disableOnInteraction: false
+//     }
+//   };
 
-  public swiperSlidesConfig: SwiperConfigInterface = {
-    slidesPerView: 'auto',
-    spaceBetween: 10,
-    centeredSlides: false,
-    direction: 'horizontal',
-};
+//   public swiperSlidesConfig: SwiperConfigInterface = {
+//     slidesPerView: 'auto',
+//     spaceBetween: 10,
+//     centeredSlides: false,
+//     direction: 'horizontal',
+// };
 
 
   //  *********************************************

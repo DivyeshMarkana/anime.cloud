@@ -21,7 +21,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 // import { SwiperModule } from "swiper/angular";
-import { SwiperModule } from 'ngx-swiper-wrapper';
+// import { SwiperModule } from 'ngx-swiper-wrapper';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 // import { NguCarouselModule } from '@ngu/carousel';
 
@@ -67,7 +67,7 @@ const routes: Route[] = [
     MatTabsModule,
     MatProgressSpinnerModule,
     // NguCarouselModule,
-    SwiperModule,
+    // SwiperModule,
     DragDropModule,
     RouterModule.forChild(routes),
   ]
