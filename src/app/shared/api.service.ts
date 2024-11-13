@@ -3,7 +3,7 @@ import { collection, addDoc, Firestore, onSnapshot, deleteDoc, updateDoc, doc } 
 
 import { Auth, createUserWithEmailAndPassword, setPersistence, getAuth, browserSessionPersistence, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from '@angular/fire/auth';
 import { Router } from '@angular/router';
-import { getDatabase, ref, set, remove, onValue } from "firebase/database";
+// import { getDatabase, ref, set, remove, onValue } from "firebase/database";
 import { AngularFireList } from '@angular/fire/compat/database';
 
 @Injectable({
