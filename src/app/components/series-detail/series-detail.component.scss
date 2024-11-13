@@ -369,9 +369,9 @@
     }
 
     .mob-ep-list .episode_list {
-        margin-inline: 2rem !important;
+        margin-inline: 1rem !important;
         display: grid !important;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
         gap: 10px;
 
         .episode_item {

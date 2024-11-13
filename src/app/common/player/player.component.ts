@@ -20,6 +20,7 @@ export class PlayerComponent implements OnInit, AfterViewInit, OnDestroy {
 
   loading = true;
   title = '';
+  epNumber = '';
   player: Plyr[] = [];
   playingId: any;
   videoPlayerOptions = {
@@ -66,6 +67,7 @@ export class PlayerComponent implements OnInit, AfterViewInit, OnDestroy {
       this.vidSrc[0]['src'] = this.data['url'];
       this.vidSrc[0]['fileId'] = this.data['fileId'];
       this.title = this.data['title'];
+      this.epNumber = this.data['episodeNumber'];
 
       setTimeout(() => {
         this.loading = false;
