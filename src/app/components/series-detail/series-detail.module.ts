@@ -9,24 +9,12 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatSelectModule } from '@angular/material/select';
 import { FormsModule } from '@angular/forms';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import { VideoComponent } from '../video/video.component';
 import { PlyrModule } from 'ngx-plyr';
 
 
 const routes: Route[] = [
   {
     path: '', component: SeriesDetailComponent,
-
-    // children: [
-    //   {
-    //     path: 'video/:id',
-    //     component: VideoComponent,
-    //     data: { title: 'Product Details' }
-    //   },
-    // ],
-  },
-  {
-    path: 'video/:id', component: VideoComponent
   },
 ]
 
@@ -35,7 +23,6 @@ const routes: Route[] = [
 @NgModule({
   declarations: [
     SeriesDetailComponent,
-    VideoComponent
   ],
   imports: [
     CommonModule,
